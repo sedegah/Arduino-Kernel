@@ -1,10 +1,8 @@
 # NanoKernel — Minimalist RTOS for ATmega328P
 
-Last updated: 2026-07-13
 
 A compact, production-oriented, bare-metal operating environment for the Arduino UNO (ATmega328P). NanoKernel provides cooperative multitasking, a pointer-based serial shell, command parsing, task diagnostics, and a small system utilities suite — all designed to fit into a 32 KB flash / 2 KB SRAM device.
 
-This README documents the advanced features added to the kernel: priority scheduling, per-task statistics, system uptime, memory diagnostics, ADC helpers, LED control, and more shell commands.
 
 ## Quick Start
 
@@ -22,7 +20,7 @@ pio device monitor -p /dev/ttyACM0 -b 115200
 
 If you need to run without PlatformIO installed, see the earlier instructions in this repo for Docker and pipx installation.
 
-## What’s New (Advanced Features)
+## Features
 
 - Priority-based scheduler (LOW, NORMAL, HIGH, CRITICAL)
 - Per-task statistics: execution count and last runtime in microseconds
@@ -34,7 +32,7 @@ If you need to run without PlatformIO installed, see the earlier instructions in
 - `led <on|off|toggle>` command controls the built-in LED
 - `reset` performs a soft system reset
 
-## Shell (Commands & Examples)
+## Shell 
 
 When the board boots you will see the banner and the `nano>` prompt:
 
@@ -48,7 +46,7 @@ Status: Ready. Core scheduler online.
 nano>
 ```
 
-Available commands (advanced):
+Available commands :
 
 | Command | Description |
 |---|---|
@@ -113,11 +111,6 @@ sudo pio run -t upload -e uno --upload-port /dev/ttyACM0
 sudo usermod -aG dialout $USER
 newgrp dialout
 ```
-
-## Changelog (recent)
-
-- 2026-07-13: Added priority scheduling, `tasks` with stats, `uptime`, `mem`, `adc`, `led`, `reset` commands.
-- 2026-07-10: Initial MVP: shell, static TCB scheduler, blink task, basic `tasks` stub.
 
 ## Extending NanoKernel
 
