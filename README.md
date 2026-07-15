@@ -8,7 +8,6 @@ A compact, production-oriented, bare-metal operating environment for the Arduino
 
 - Build and upload with PlatformIO (recommended):
 ```bash
-cd /home/sed/Downloads/Arduino\ Nanokernel
 pio run -e uno
 pio run -t upload -e uno --upload-port /dev/ttyACM0
 ```
