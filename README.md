@@ -1,7 +1,7 @@
 # NanoKernel — Minimalist RTOS for ATmega328P
 
 
-A compact, production-oriented, bare-metal operating environment for the Arduino UNO (ATmega328P). NanoKernel provides cooperative multitasking, a pointer-based serial shell, command parsing, task diagnostics, and a small system utilities suite — all designed to fit into a 32 KB flash / 2 KB SRAM device.
+A compact, production-oriented, bare-metal operating environment for the Arduino UNO (ATmega328P). NanoKernel provides cooperative multitasking, a pointer-based serial shell, command parsing, task diagnostics, and a small system utilities suite all designed to fit into a 32 KB flash / 2 KB SRAM device.
 
 
 ## Quick Start
